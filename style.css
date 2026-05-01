@@ -201,7 +201,7 @@ nav a:hover {
 .item {
     text-align: center;
     font-size: 16px;
-    font-weight: bold;  
+    font-weight: bold;
     color: #ff69b4;
 }
 
@@ -235,5 +235,139 @@ nav a:hover {
         flex-direction: column;
         text-align: center;
         gap: 40px;
+    }
+}
+
+/* FORMAÇÃO */
+#formacao {
+    background: #ffffff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.titulo {
+    font-size: 28px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: #ff69b4;
+}
+
+.titulo span {
+    color: #ff69b4;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    margin-bottom: 50px;
+    height: 40px;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ff69b4;
+    transform: translateY(-50%);
+}
+
+/* BOLINHAS */
+.dot {
+    position: absolute;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    background: #ff69b4;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* POSIÇÃO DAS BOLINHAS */
+.dot:nth-child(2) {
+    left: 10%;
+}
+
+.dot:nth-child(3) {
+    left: 35%;
+}
+
+.dot:nth-child(4) {
+    left: 60%;
+}
+
+.dot:nth-child(5) {
+    left: 85%;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-formacao {
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* CENTRALIZA horizontal */
+    text-align: center;    /* CENTRALIZA texto */
+}
+.card-formacao:hover {
+    transform: translateY(-5px);
+}
+
+.card-formacao h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-formacao p {
+    color: #777;
+}
+
+.data {
+    display: block;
+    font-size: 13px;
+    color: #ff69b4;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+
+    .cards {
+        justify-content: center;
+    }
+
+    .card-formacao {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .dot:nth-child(2) {
+        left: 10%;
+    }
+
+    .dot:nth-child(3) {
+        left: 35%;
+    }
+
+    .dot:nth-child(4) {
+        left: 65%;
+    }
+
+    .dot:nth-child(5) {
+        left: 90%;
     }
 }
