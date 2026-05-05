@@ -56,6 +56,7 @@ nav {
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: #fff0f5;
+
 }
 
 section {
@@ -314,14 +315,17 @@ nav a:hover {
     padding: 20px;
     border-radius: 15px;
     width: 220px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: 0.3s;
 
     display: flex;
     flex-direction: column;
-    align-items: center;   /* CENTRALIZA horizontal */
-    text-align: center;    /* CENTRALIZA texto */
+    align-items: center;
+    /* CENTRALIZA horizontal */
+    text-align: center;
+    /* CENTRALIZA texto */
 }
+
 .card-formacao:hover {
     transform: translateY(-5px);
 }
@@ -369,5 +373,94 @@ nav a:hover {
 
     .dot:nth-child(5) {
         left: 90%;
+    }
+}
+
+/* PORTFÓLIO */
+#portfolio {
+    background: #fff0f5;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+}
+
+.titulo::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #ff69b4;
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* GRID */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+.project-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEM */
+.project-img {
+    width: 100%;
+    height: 140px;
+    background: #ffd6e7;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+/* TEXTO */
+.project-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.project-card p {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* BOTÃO */
+.project-card .btn {
+    font-size: 13px;
+    padding: 6px 12px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 }
